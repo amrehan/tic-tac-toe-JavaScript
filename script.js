@@ -29,20 +29,18 @@ function userPlay(value) {
 
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 function compPlay(value, array) {
-  var random = Math.floor(Math.random()*(array.length - 1) + 1);
-  // if (value == 1 && $('.' + 2).attr('src') != userImage){
-  //   random = 2;
-  //   $('.' + random).attr('src', compImage);
-  // }else if (value == 1 && $('.' + 4).attr('src') != userImage)
-  // {
-  //   random = 4;
-  //   $('.' + random).attr('src', compImage);
-  // }
-  // else{
-  //   $('.' + random).attr('src', compImage);}
+  
+  if (value == 1 && $('.' + 2).attr('src') != userImage){
+    random = 2;
+    $('.' + random).attr('src', compImage);
+  }else if (value == 1 && $('.' + 4).attr('src') != userImage)
+  {
+    random = 4;
+    $('.' + random).attr('src', compImage);
+  }
+  else{
+    $('.' + random).attr('src', compImage);}
 
-  array.splice(value-1, 1);
-  $('.' + array[random])
 
 }
 
