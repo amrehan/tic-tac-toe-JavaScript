@@ -27,9 +27,9 @@ function userPlay(value) {
   $('.' + value).attr('src', userImage);
 }
 
-array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-function compPlay(value, array) {
-  
+
+function compPlay(value) {
+  var random = Math.floor(Math.random()*value + 1);
   if (value == 1 && $('.' + 2).attr('src') != userImage){
     random = 2;
     $('.' + random).attr('src', compImage);
@@ -38,10 +38,9 @@ function compPlay(value, array) {
     random = 4;
     $('.' + random).attr('src', compImage);
   }
-  else{
-    $('.' + random).attr('src', compImage);}
+  else{$('.' + random).attr('src', compImage);}
 
-
+  // console.log(random)
 }
 
 $('.1') == userImage && $('.2') == userImage && $('.3') == userImage
